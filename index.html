@@ -4,145 +4,220 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SHAPNO ICT Training and Service Ltd</title>
+  <title>SHAPNO ICT TRAINING AND SERVICE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background: #f4f4f4;
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      scroll-behavior: smooth;
     }
-    header, footer {
-      background: #0077cc;
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f4f8;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #0066cc, #003d99);
       color: white;
-      padding: 20px 0;
+      padding: 60px 20px;
       text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
     }
     nav {
-      background: #005fa3;
-      text-align: center;
+      background-color: #002f6c;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
       padding: 10px;
     }
     nav a {
       color: white;
       margin: 0 15px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      transition: color 0.3s;
     }
-    .container {
-      padding: 20px;
+    nav a:hover {
+      color: #ffdd57;
+    }
+    section {
       max-width: 1000px;
       margin: auto;
-      background: white;
+      padding: 40px 20px;
     }
     h2 {
-      color: #0077cc;
+      color: #003d99;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      text-align: center;
     }
-    form {
-      background: #eef;
-      padding: 15px;
-      border-radius: 5px;
+    .hero {
+      background: url('https://images.unsplash.com/photo-1543269865-cbf427effbad') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
     }
-    label {
-      display: block;
-      margin: 10px 0 5px;
+    .hero h2 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
     }
-    input, textarea {
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+    .hero a {
+      background: #ffdd57;
+      color: #003366;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h3 {
+      color: #0066cc;
+      font-size: 1.1rem;
+    }
+    .contact-form input, .contact-form textarea {
       width: 100%;
       padding: 10px;
-      margin-bottom: 15px;
+      margin: 10px 0;
+      border-radius: 5px;
       border: 1px solid #ccc;
-      border-radius: 4px;
     }
-    input[type="submit"] {
-      background: #0077cc;
+    .contact-form button {
+      background: #0066cc;
       color: white;
+      padding: 10px 20px;
       border: none;
+      border-radius: 6px;
       cursor: pointer;
+      font-weight: bold;
     }
-    input[type="submit"]:hover {
-      background: #005fa3;
+    .contact-form button:hover {
+      background: #004999;
     }
-    .logo {
-      max-width: 150px;
-      display: block;
-      margin: 0 auto 10px;
+    .why-us {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 20px;
+    }
+    .why-us .card {
+      flex: 1 1 200px;
+      text-align: center;
+    }
+    .testimonials {
+      background-color: #e6f0ff;
+      padding: 40px 20px;
+      border-radius: 10px;
+    }
+    .testimonial {
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+    footer {
+      background-color: #002f6c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      margin-top: 30px;
+    }
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.8rem; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="logo.png" alt="SHAPNO Logo" class="logo">
-    <h1>SHAPNO ICT Training and Service Ltd</h1>
-    <p>Empowering the Future Through ICT Innovation</p>
+    <h1>SHAPNO ICT TRAINING AND SERVICE</h1>
+    <p>Shaping the Future with Technology</p>
   </header>
 
   <nav>
-    <a href="#about">About Us</a>
-    <a href="#services">Services</a>
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
     <a href="#courses">Courses</a>
+    <a href="#why">Why Us</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <div class="container">
+  <section id="hero" class="hero">
+    <h2>Learn. Grow. Succeed.</h2>
+    <p>Join our ICT training programs and build a brighter future.</p>
+    <a href="#contact">Enroll Now</a>
+  </section>
 
-    <section id="about">
-      <h2>About Us</h2>
-      <p>SHAPNO ICT Training and Service Ltd is a leading IT company in Bangladesh, committed to providing high-quality ICT training and innovative digital services. Our expert instructors and tech professionals are dedicated to helping individuals and businesses thrive in the digital age.</p>
-      <p><strong>Mission:</strong> Deliver cutting-edge ICT training and services that empower growth.</p>
-      <p><strong>Vision:</strong> To be a national leader in ICT education and service innovation.</p>
-    </section>
+  <section id="about">
+    <h2>About Us</h2>
+    <p><strong>Mission:</strong> To empower the youth of Bangladesh with essential ICT skills.</p>
+    <p><strong>Vision:</strong> To transform Bangladesh into a skilled and digitally advanced nation.</p>
+  </section>
 
-    <section id="services">
-      <h2>Our Services</h2>
-      <ul>
-        <li>Website Design and Development</li>
-        <li>Graphic Design</li>
-        <li>Software Solutions</li>
-        <li>Digital Marketing</li>
-        <li>Networking & Cybersecurity</li>
-        <li>IT Consultancy</li>
-        <li>E-commerce & Branding</li>
-      </ul>
-    </section>
+  <section id="courses">
+    <h2>Our Courses</h2>
+    <div class="course-grid">
+      <div class="card"><h3>Computer Office Application</h3></div>
+      <div class="card"><h3>Graphics Design</h3></div>
+      <div class="card"><h3>Web Design & Development</h3></div>
+      <div class="card"><h3>Digital Marketing</h3></div>
+      <div class="card"><h3>Freelancing Training</h3></div>
+      <div class="card"><h3>ICT Career Consultancy</h3></div>
+    </div>
+  </section>
 
-    <section id="courses">
-      <h2>Our Courses</h2>
-      <ul>
-        <li>Web Design & Development (HTML, CSS, JavaScript, WordPress)</li>
-        <li>Graphic Design (Photoshop, Illustrator)</li>
-        <li>Digital Marketing (SEO, SMM, Email Marketing)</li>
-        <li>Networking & Cybersecurity Basics</li>
-        <li>Software Development (Python, Java, C#)</li>
-        <li>Freelancing & Outsourcing Training</li>
-      </ul>
-      <p>Duration: 1 to 6 months | Certifications Available | Internship Support</p>
-    </section>
+  <section id="why">
+    <h2>Why Choose Us?</h2>
+    <div class="why-us">
+      <div class="card"><h3>Expert Trainers</h3><p>Industry professionals with real experience.</p></div>
+      <div class="card"><h3>Job Support</h3><p>We assist in freelancing and job placement.</p></div>
+      <div class="card"><h3>Affordable Fees</h3><p>High quality training at a low cost.</p></div>
+    </div>
+  </section>
 
-    <section id="message">
-      <h2>Send Us a Message</h2>
-      <form action="mailto:shapnoicttrainingandservice@gmail.com" method="post" enctype="text/plain">
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required>
+  <section id="testimonials" class="testimonials">
+    <h2>What Our Students Say</h2>
+    <div class="testimonial">“I learned graphics design here and now I earn through freelancing!” – Rakib</div>
+    <div class="testimonial">“The trainers are very supportive and friendly.” – Shoma</div>
+  </section>
 
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone">
-
-        <label for="message">Your Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <input type="submit" value="Send Message">
-      </form>
-    </section>
-
-  </div>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Email:</strong> shapnoicttrainingandservice@gmail.com</p>
+    <p><strong>Phone:</strong> 01737580063</p>
+    <div class="contact-form">
+      <input type="text" placeholder="Your Name" />
+      <input type="email" placeholder="Your Email" />
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button>Send Message</button>
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; 2025 SHAPNO ICT Training and Service Ltd. All rights reserved.</p>
+    <p>&copy; 2025 SHAPNO ICT TRAINING AND SERVICE. All rights reserved.</p>
   </footer>
 
 </body>
